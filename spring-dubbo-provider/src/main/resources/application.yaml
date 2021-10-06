@@ -15,7 +15,8 @@ dubbo:
   application:
     name: spring-dubbo-provider
   registry:
-    address: nacos://192.168.71.128:8848
+#    address: nacos://192.168.71.128:8848
+    address: zookeeper://192.168.71.128:2181
   scan:
     base-packages: org.example
 
