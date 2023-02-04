@@ -1,0 +1,25 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: spring-dubbo-provider
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.211.55.3:3306/cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: wproot
+
+dubbo:
+  application:
+    name: spring-dubbo-provider
+  registry:
+#    address: nacos://10.211.55.3:8848
+    address: zookeeper://10.211.55.3:2181
+  scan:
+    base-packages: org.example
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: org.example.entities

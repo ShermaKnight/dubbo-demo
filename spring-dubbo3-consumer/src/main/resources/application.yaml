@@ -1,0 +1,22 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: spring-dubbo-consumer
+
+dubbo:
+  application:
+    name: spring-dubbo-consumer
+    qosEnable: true
+    qosPort: 10002
+    qosAcceptForeignIp: false
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+#    address: nacos://10.211.55.3:8848
+    address: zookeeper://10.211.55.3:2181
+  scan:
+    base-packages: org.example
+
