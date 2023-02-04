@@ -14,6 +14,9 @@ spring:
 dubbo:
   application:
     name: spring-dubbo-provider
+    qosEnable: true
+    qosPort: 10001
+    qosAcceptForeignIp: false
   registry:
 #    address: nacos://10.211.55.3:8848
     address: zookeeper://10.211.55.3:2181
